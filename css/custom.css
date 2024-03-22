@@ -1,12 +1,5 @@
-.wrapper {
-  height: 10000px;
-}
-
 section {
   padding: 150px 0 100px 0;
-}
-.a {
-  margin: 0;
 }
 
 /* Header Style Codes */
@@ -73,10 +66,6 @@ section {
   height: 100%;
   display: block; /* 이미지 태그는 인라인 : 블럭으로 변경 */
   object-fit: cover;
-}
-
-body {
-  height: 3000px;
 }
 
 /* Header Marquee Style */
@@ -212,35 +201,83 @@ body {
   color: #4b4b4b;
 }
 
-/* work Section style */
+/* Work Section Style */
 .work-wrapper {
   display: flex;
   padding: 0 40px;
   gap: 80px;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 }
 
 .work-wrapper > div {
   width: calc(50% - 40px);
-  position: relative;
+  position:relative;
+  overflow:hidden;
 }
 
 .work-wrapper > div img {
   width: 100%;
 }
 
-.work-wrapper > div > .work-item-num {
-  position: absolute;
-  top: 400px;
-  left: 100px;
-  font-size: 70px;
-  color: #fff;
+.work-wrapper > div > .work-item-num{
+  position:absolute;
+  font-size:70px;
+  color:#fff;
   mix-blend-mode: difference;
+  z-index:99;
 }
 
-/* .sample{
-  width:100%; 
-  height:100vh; 
-  background:#444;
-  margin:auto;
-} */
+/* Services Section Style */
+.service-item{
+  padding:40px 0;
+  border-bottom:1px solid #2f2e2e;
+  position:relative;
+}
+
+.service-item .service-arrow{
+  position:absolute;
+  display:inline-block;
+  width:55px;
+  height:55px;
+  right:0;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.service-item .service-arrow img{
+  width:100%;
+  display:block; /* 인라인 테그는 transform 적용 안됨 : 따라서 block, 또는 inline-block으로 변경하여 사용 */
+  transform:rotate(180deg);
+}
+
+.service-item .service-text{
+  font-size:50px;
+  color:#4b4b4b;
+  text-transform:uppercase;
+}
+
+.service .content{
+  padding:0 70px;
+}
+
+/* Footer Style */
+footer{
+  width:100%;
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-wrapper{
+  color:#fff;
+  font-size:70px;
+  text-transform:uppercase;
+  letter-spacing:15px; /* 글자 간격 : word-spacing - 단어 간격 */
+}
+
+footer span{
+  display:inline-block;
+}
+
+
